@@ -14,7 +14,7 @@ def get_requirements(filePath: str) -> List[str]:
             requirements.remove(HYP_E_DOT)
     return requirements
 
-setup(
+setup(          # meta-data for the project 
     name='ML-ETE-Project',
     version='0.1.2',
     author='Sakshit',
