@@ -1,10 +1,10 @@
 import sys
-from src.logger import logging
+from logger import logging
 
 def error_msg_detail(error, error_detail:sys):      # sys module itself is passed as a parameter so we can use sys.exc_info() to get the traceback info.
     _,_,exc_tb = error_detail.exc_info()        # gives the execution info
     file_name = exc_tb.tb_frame.f_code.co_filename
-    error_msg = "Error occured in python script name [{0}], line no: [{1}] error__message: [{3}]".format(
+    error_msg = "Error occured in python script name [{0}], line no: [{1}] error__message: [{2}]".format(
         file_name, exc_tb.tb_lineno, str(error))
     return error_msg
 
